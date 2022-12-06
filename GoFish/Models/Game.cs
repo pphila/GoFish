@@ -1,9 +1,9 @@
-using System.Collection.Generic;
+using System.Collections.Generic;
 
 namespace GoFish.Models
 {
   public class Games
   {
-    
+
   }
 }
