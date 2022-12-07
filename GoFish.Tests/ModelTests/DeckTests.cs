@@ -5,16 +5,16 @@ using GoFish.Models;
 
 namespace GoFish.Tests
 {
-  // [TestClass]
-  // public class DeckTests
-  // {
+  [TestClass]
+  public class DeckTests
+  {
     
-  //   [TestMethod]
-  //   public void DeckConstructor_CreatesInstanceOfDeck_Deck()
-  //   {
-  //     Deck newDeck = new Deck("test");
-  //     Assert.AreEqual(typeof(Deck), newDeck.GetType());
-  //   }
+    [DataTestMethod]
+    public void DeckConstructor_CreatesInstanceOfDeck_Deck()
+    {
+      Decks newDeck = new Decks();
+      ColllectionAssert.AreEqual(typeof(Deck), newDeck.GetType());
+    }
     
-  // }
+  }
 }

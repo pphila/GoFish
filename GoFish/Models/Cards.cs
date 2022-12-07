@@ -7,46 +7,48 @@ using System;
 
 namespace GoFish.Models
 {
-  // public enum Suit 
-  // { 
-  //   Clubs, 
-  //   Daimonds, 
-  //   Hearts, 
-  //   Spades, 
-  // }
+  public enum Suit 
+  { 
+    Clubs, 
+    Daimonds, 
+    Hearts, 
+    Spades, 
+  }
 
-  // public enum Rank
-  // {
-  //   Ace,
-  //   Two,
-  //   Three,
-  //   Four,
-  //   Five,
-  //   Six,
-  //   Seven,
-  //   Eight,
-  //   Nine,
-  //   Ten,
-  //   Jack,
-  //   Queen,
-  //   King
-  // }
+  public enum Rank
+  {
+    Ace,
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Jack,
+    Queen,
+    King
+  }
 
   public class Card
   {
-    public string Suit { get; set; }
-    // public int Rank { get; set; }
+    public Suit Suit { get; set; }
+    public Rank Rank { get; set; }
 
-    public Card(string suit)
+    public Card(Suit suit, Rank rank)
     {
       Suit = suit;
-      // Rank = rank;
+      Rank = rank;
     }
 
-    // public string Name
-    // {
-    //   // get { return Rank.ToString(); + " of " + Suit.ToString(); }
-    // }
-
+    public override string CardName()
+    {
+      return ("[" + Rank + " of " + Suit + "]");
+    }
+    
   }
+
+  
 }
