@@ -12,8 +12,8 @@ namespace Gofish.Tests
     [TestMethod]
     public void CardConstructor_CreatesNewInstanceOfCard_Card()
     {
-      Card newCard = new Card(Suit, Rank);
-      Assert.IsNotNull(typeof(Card), newCard.GetType());
+      Card newCard = new Card("test card"); 
+      Assert.AreEqual(typeof(Card), newCard.GetType());
     }
   }
 }
